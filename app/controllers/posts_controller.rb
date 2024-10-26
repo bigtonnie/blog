@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_post, only: %i[show edit update destroy]
   def index
-    @posts = Post.all
+    @posts = user_signed_in? ? Post.sorted : Post.published.sorted
   end
 
   def show
@@ -41,11 +41,11 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :published_at)
   end
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = user_signed_in? ? Post.find(params[:id]) : Post.published.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     redirect_to root_path
   end
