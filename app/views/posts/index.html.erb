@@ -1,7 +1,6 @@
-<%= link_to 'New post', new_post_path %>
 <% @posts.each do |post| %>
-  <div class='bg-gray-200 p-4 rounded-md mt-5'>
+  <div class='bg-gray-200 p-4 rounded-md mt-5 shadow-md'>
     <h2><%= link_to post.title, post %></h2>
-    <%= post.body %>
+    <%= post.content %>
   </div>
 <% end%>
