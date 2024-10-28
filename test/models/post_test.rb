@@ -2,38 +2,38 @@ require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
   test 'draft? returns true for draft post' do
-    assert Post.new(published_at: nil).draft?
+    assert posts(:draft).draft?
   end
 
   test 'draft? returns false for published post' do
-    refute Post.new(published_at: 1.year.ago).draft?
+    refute posts(:published).draft?
   end
 
   test 'draft? returns false for scheduled post' do
-    refute Post.new(published_at: 1.year.from_now).draft?
+    refute posts(:scheduled).draft?
   end
 
   test 'published? returns true for published post' do
-    assert Post.new(published_at: 1.year.ago).published?
+    assert posts(:published).published?
   end
 
   test 'published? returns false for draft post' do
-    refute Post.new(published_at: nil).published?
+    refute posts(:draft).published?
   end
 
   test 'published? returns false for scheduled post' do
-    refute Post.new(published_at: 1.year.from_now).published?
+    refute posts(:scheduled).published?
   end
 
   test 'scheduled? returns true for scheduled post' do
-    assert Post.new(published_at: 1.year.from_now).scheduled?
+    assert posts(:scheduled).scheduled?
   end
 
   test 'scheduled? returns false for draft post' do
-    refute Post.new(published_at: nil).scheduled?
+    refute posts(:draft).scheduled?
   end
 
   test 'scheduled? returns false for scheduled post' do
-    refute Post.new(published_at: 1.year.ago).scheduled?
+    refute posts(:published).scheduled?
   end
 end
