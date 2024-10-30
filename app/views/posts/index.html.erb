@@ -5,7 +5,15 @@
     <% elsif post.scheduled? %>
       <div class='bg-sky-200  p-2 rounded-md w-24 '>Scheduled</div>
     <%end%>
+    <% if post.cover_image.attached? %>
+      <%= image_tag post.cover_image %>
+    <% end %>
     <h2><%= link_to post.title, post %></h2>
     <%= post.content %>
   </div>
 <% end%>
+<% if @pagy.count > @pagy.limit %>
+  <div class='my-16'>
+    <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+  </div>
+<% end %>

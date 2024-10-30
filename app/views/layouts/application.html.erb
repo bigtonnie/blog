@@ -15,10 +15,12 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <body class='prose mx-auto'>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <div>
+  <body class='prose mx-auto mb-16'>
+    <div class='grid place-items-center'>
+      <p class="notice text-emerald-600 "><%= notice %> </p>
+      <p class="alert  text-red-600"><%= alert %> </p>
+    </div>
+    <div >
       <%  if user_signed_in? %>
         <%= render 'shared/nav' %>
       <%else%>

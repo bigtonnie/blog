@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
   def index
     @posts = user_signed_in? ? Post.sorted : Post.published.sorted
+    @pagy, @posts = pagy(@posts, limit: 10)
   end
 
   def show
