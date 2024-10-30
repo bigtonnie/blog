@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddPublishedAtToPost < ActiveRecord::Migration[7.2]
   def change
     add_column :posts, :published_at, :datetime

@@ -1,20 +1,24 @@
-class Posts::CoverImagesController < ApplicationController
-  include ActionView::RecordIdentifier
+# frozen_string_literal: true
 
-  before_action :authenticate_user!
-  before_action :set_post
+module Posts
+  class CoverImagesController < ApplicationController
+    include ActionView::RecordIdentifier
 
-  def destroy
-    @post.cover_image.purge_later
-    respond_to do |format|
-      format.html { redirect_to edit_post_path(@post) }
-      format.turbo_stream { render turbo_stream: turbo_stream.remove(dom_id(@post, :cover_image)) }
+    before_action :authenticate_user!
+    before_action :set_post
+
+    def destroy
+      @post.cover_image.purge_later
+      respond_to do |format|
+        format.html { redirect_to edit_post_path(@post) }
+        format.turbo_stream { render turbo_stream: turbo_stream.remove(dom_id(@post, :cover_image)) }
+      end
     end
-  end
 
-  private
+    private
 
-  def set_post
-    @post = Post.find(params[:post_id])
+    def set_post
+      @post = Post.find(params[:post_id])
+    end
   end
 end
