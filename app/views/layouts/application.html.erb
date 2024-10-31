@@ -12,6 +12,9 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+    </style>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -23,9 +26,6 @@
     <div >
       <%  if user_signed_in? %>
         <%= render 'shared/nav' %>
-      <%else%>
-        <%= link_to 'Sign up', new_user_registration_path %>
-        <%= link_to 'Log in ', new_user_session_path %>
       <%end%>
     </div>
     <%= yield %>

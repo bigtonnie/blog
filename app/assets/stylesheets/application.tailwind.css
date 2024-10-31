@@ -38,3 +38,9 @@
     }
   }
 }
+
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 500;
+  font-style: regular;
+}
