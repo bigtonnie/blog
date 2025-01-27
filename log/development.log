@@ -21162,3 +21162,676 @@ Migrating to CreateTopics (20250123091614)
   [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250123091614'[0m
   [1m[36mTRANSACTION (11.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2025-01-27 17:52:24 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `index'
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."published_at" DESC, "posts"."updated_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 4.0ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (1.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 4.6ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (3.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 5.8ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 2.5ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 4.5ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 14.2ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 1.1ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 2.2ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 2.4ms | GC: 0.0ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 420.1ms | GC: 0.0ms)
+  Rendered shared/_nav.html.erb (Duration: 5.3ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 759.5ms | GC: 56.9ms)
+Completed 200 OK in 989ms (Views: 756.4ms | ActiveRecord: 22.0ms (23 queries, 0 cached) | GC: 87.6ms)
+
+
+Started GET "/manifest.json" for ::1 at 2025-01-27 17:52:26 +0300
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-27 17:52:31 +0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `index'
+  [1m[36mPost Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."published_at" DESC, "posts"."updated_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 4.2ms | GC: 1.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (1.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 10.7ms | GC: 4.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 3.1ms | GC: 1.7ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 1.5ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 170.5ms | GC: 56.1ms)
+  Rendered shared/_nav.html.erb (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 184.5ms | GC: 56.5ms)
+Completed 200 OK in 202ms (Views: 183.6ms | ActiveRecord: 2.8ms (23 queries, 0 cached) | GC: 56.5ms)
+
+
+Started GET "/posts/new" for ::1 at 2025-01-27 17:52:33 +0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 34.6ms | GC: 0.4ms)
+  Rendered posts/new.html.erb within layouts/application (Duration: 38.2ms | GC: 0.4ms)
+  Rendered shared/_nav.html.erb (Duration: 6.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 54.4ms | GC: 0.7ms)
+Completed 200 OK in 83ms (Views: 55.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/users/edit" for ::1 at 2025-01-27 17:52:34 +0300
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 34.4ms | GC: 0.0ms)
+  Rendered shared/_nav.html.erb (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | GC: 0.0ms)
+Completed 200 OK in 60ms (Views: 53.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-27 17:52:38 +0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `index'
+  [1m[36mPost Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."published_at" DESC, "posts"."updated_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.6ms | GC: 0.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 7.7ms | GC: 0.0ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 73.3ms | GC: 2.4ms)
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 82.1ms | GC: 2.4ms)
+Completed 200 OK in 90ms (Views: 82.2ms | ActiveRecord: 1.4ms (23 queries, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/" for ::1 at 2025-01-27 17:52:39 +0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `index'
+  [1m[36mPost Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."published_at" DESC, "posts"."updated_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.0ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.0ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.0ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.3ms | GC: 0.0ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 45.7ms | GC: 8.4ms)
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 53.6ms | GC: 8.7ms)
+Completed 200 OK in 69ms (Views: 60.0ms | ActiveRecord: 1.3ms (23 queries, 0 cached) | GC: 8.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2025-01-27 17:52:40 +0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 19.6ms | GC: 0.1ms)
+  Rendered posts/new.html.erb within layouts/application (Duration: 22.0ms | GC: 0.1ms)
+  Rendered shared/_nav.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | GC: 0.1ms)
+Completed 200 OK in 46ms (Views: 36.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/posts" for ::1 at 2025-01-27 17:53:35 +0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Test if okay", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x00007ce92f29f410 @tempfile=#<Tempfile:/tmp/RackMultipart20250127-34320-bnwqqd.png>, @content_type="image/png", @original_filename="Screenshot From 2025-01-13 17-06-41.png", @headers="Content-Disposition: form-data; name=\"post[cover_image]\"; filename=\"Screenshot From 2025-01-13 17-06-41.png\"\r\nContent-Type: image/png\r\n">, "content"=>"", "published_at(1i)"=>"2025", "published_at(2i)"=>"1", "published_at(3i)"=>"27", "published_at(4i)"=>"17", "published_at(5i)"=>"53"}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+  
+NameError (Missing model class Topic for the Post#topic association. You can specify a different model class with the :class_name option.):
+
+Causes:
+NameError (uninitialized constant Post::Topic)
+  
+app/controllers/posts_controller.rb:22:in `create'
+Started GET "/" for ::1 at 2025-01-27 17:54:25 +0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `index'
+  [1m[36mPost Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."published_at" DESC, "posts"."updated_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 22.3ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 1.1ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.9ms | GC: 0.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 1.1ms | GC: 0.3ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 182.8ms | GC: 1.7ms)
+  Rendered shared/_nav.html.erb (Duration: 6.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 242.7ms | GC: 2.3ms)
+Completed 200 OK in 409ms (Views: 251.8ms | ActiveRecord: 10.5ms (23 queries, 0 cached) | GC: 47.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-27 17:54:26 +0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `index'
+  [1m[36mPost Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."published_at" DESC, "posts"."updated_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 1.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.6ms | GC: 0.0ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 59.4ms | GC: 0.0ms)
+  Rendered shared/_nav.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 68.9ms | GC: 0.0ms)
+Completed 200 OK in 85ms (Views: 68.4ms | ActiveRecord: 2.0ms (23 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/manifest.json" for ::1 at 2025-01-27 17:54:27 +0300
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2025-01-27 17:54:29 +0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 20.8ms | GC: 1.0ms)
+  Rendered posts/new.html.erb within layouts/application (Duration: 21.6ms | GC: 1.0ms)
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.6ms | GC: 2.6ms)
+Completed 200 OK in 47ms (Views: 38.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 2.6ms)
+
+
+Started POST "/posts" for ::1 at 2025-01-27 17:55:15 +0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Test if okay", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x00007ce92d23ce48 @tempfile=#<Tempfile:/tmp/RackMultipart20250127-34320-o5pyog.png>, @content_type="image/png", @original_filename="Screenshot From 2025-01-13 17-06-41.png", @headers="Content-Disposition: form-data; name=\"post[cover_image]\"; filename=\"Screenshot From 2025-01-13 17-06-41.png\"\r\nContent-Type: image/png\r\n">, "content"=>"<div>ok</div>", "published_at(1i)"=>"", "published_at(2i)"=>"", "published_at(3i)"=>"", "published_at(4i)"=>"", "published_at(5i)"=>""}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+  
+NameError (Missing model class Topic for the Post#topic association. You can specify a different model class with the :class_name option.):
+
+Causes:
+NameError (uninitialized constant Post::Topic)
+  
+app/controllers/posts_controller.rb:22:in `create'
+Started GET "/posts/new" for ::1 at 2025-01-27 17:55:46 +0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 12.8ms | GC: 1.0ms)
+  Rendered posts/new.html.erb within layouts/application (Duration: 13.6ms | GC: 1.0ms)
+  Rendered shared/_nav.html.erb (Duration: 4.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | GC: 1.0ms)
+Completed 200 OK in 35ms (Views: 29.6ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/manifest.json" for ::1 at 2025-01-27 17:55:47 +0300
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2025-01-27 17:56:07 +0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Test if okay", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x00007ce92f83bcc0 @tempfile=#<Tempfile:/tmp/RackMultipart20250127-34320-lqq9b4.png>, @content_type="image/png", @original_filename="Screenshot From 2025-01-13 17-06-41.png", @headers="Content-Disposition: form-data; name=\"post[cover_image]\"; filename=\"Screenshot From 2025-01-13 17-06-41.png\"\r\nContent-Type: image/png\r\n">, "content"=>"<div>test</div>", "published_at(1i)"=>"", "published_at(2i)"=>"", "published_at(3i)"=>"", "published_at(4i)"=>"", "published_at(5i)"=>""}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mPost Create (3.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "published_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Test if okay"], ["body", nil], ["created_at", "2025-01-27 14:56:07.893763"], ["updated_at", "2025-01-27 14:56:07.893763"], ["published_at", nil]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mActionText::RichText Create (0.2ms)[0m  [1m[32mINSERT INTO "action_text_rich_texts" ("name", "body", "record_type", "record_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "content"], ["body", "<div>test</div>"], ["record_type", "Post"], ["record_id", 65], ["created_at", "2025-01-27 14:56:07.920619"], ["updated_at", "2025-01-27 14:56:07.920619"]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 59], ["record_type", "ActionText::RichText"], ["name", "embeds"]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 65], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 65], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["key", "5h42qu3gx1qyjyyqpnnb9vqo0baq"], ["filename", "Screenshot From 2025-01-13 17-06-41.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 867837], ["checksum", "LASwD721QYxnBRIDjghq0w=="], ["created_at", "2025-01-27 14:56:08.044462"]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "cover_image"], ["record_type", "Post"], ["record_id", 65], ["blob_id", 11], ["created_at", "2025-01-27 14:56:08.053105"]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mPost Update (0.1ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = ? WHERE "posts"."id" = ?[0m  [["updated_at", "2025-01-27 14:56:08.057509"], ["id", 65]]
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22:in `create'
+[36m  Disk Storage (2.9ms) [0m[32mUploaded file to key: 5h42qu3gx1qyjyyqpnnb9vqo0baq (checksum: LASwD721QYxnBRIDjghq0w==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: df74289e-1c0b-452b-b2ed-3f60df55a152) to Async(default) with arguments: #<GlobalID:0x00007ce92d55b160 @uri=#<URI::GID gid://blog/ActiveStorage::Blob/11>>
+[ActiveJob] ↳ app/controllers/posts_controller.rb:22:in `create'
+Redirected to http://localhost:3000/posts/65
+Completed 302 Found in 301ms (ActiveRecord: 15.0ms (9 queries, 0 cached) | GC: 11.1ms)
+
+
+Started GET "/posts/65" for ::1 at 2025-01-27 17:56:08 +0300
+[ActiveJob] [ActiveStorage::AnalyzeJob] [df74289e-1c0b-452b-b2ed-3f60df55a152]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [df74289e-1c0b-452b-b2ed-3f60df55a152] Performing ActiveStorage::AnalyzeJob (Job ID: df74289e-1c0b-452b-b2ed-3f60df55a152) from Async(default) enqueued at 2025-01-27T14:56:08.111048539Z with arguments: #<GlobalID:0x00007ce92d0d3638 @uri=#<URI::GID gid://blog/ActiveStorage::Blob/11>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [df74289e-1c0b-452b-b2ed-3f60df55a152] [36m  Disk Storage (11.9ms) [0m[34mDownloaded file from key: 5h42qu3gx1qyjyyqpnnb9vqo0baq[0m
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"65"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 65], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:6
+[ActiveJob] [ActiveStorage::AnalyzeJob] [df74289e-1c0b-452b-b2ed-3f60df55a152]   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 65], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [df74289e-1c0b-452b-b2ed-3f60df55a152]   [1m[36mActiveStorage::Blob Update (9.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"width\":1366,\"height\":768,\"analyzed\":true}"], ["id", 11]]
+  ↳ app/views/posts/show.html.erb:8
+[ActiveJob] [ActiveStorage::AnalyzeJob] [df74289e-1c0b-452b-b2ed-3f60df55a152]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ?[0m  [["blob_id", 11]]
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 7.0ms | GC: 0.0ms)
+  Rendered posts/show.html.erb within layouts/application (Duration: 115.8ms | GC: 0.4ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [df74289e-1c0b-452b-b2ed-3f60df55a152]   [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 65]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [df74289e-1c0b-452b-b2ed-3f60df55a152]   [1m[36mPost Update (0.1ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = ? WHERE "posts"."id" = ?[0m  [["updated_at", "2025-01-27 14:56:08.730697"], ["id", 65]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [df74289e-1c0b-452b-b2ed-3f60df55a152]   [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [df74289e-1c0b-452b-b2ed-3f60df55a152] Performed ActiveStorage::AnalyzeJob (Job ID: df74289e-1c0b-452b-b2ed-3f60df55a152) from Async(default) in 559.21ms
+  Rendered shared/_nav.html.erb (Duration: 9.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 184.9ms | GC: 3.8ms)
+Completed 200 OK in 250ms (Views: 192.9ms | ActiveRecord: 2.6ms (5 queries, 0 cached) | GC: 5.2ms)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTEsInB1ciI6ImJsb2JfaWQifX0=--7e33bff2146d035a7dd5f75703275546c79d1bb8/Screenshot%20From%202025-01-13%2017-06-41.png" for ::1 at 2025-01-27 17:56:08 +0300
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTEsInB1ciI6ImJsb2JfaWQifX0=--7e33bff2146d035a7dd5f75703275546c79d1bb8", "filename"=>"Screenshot From 2025-01-13 17-06-41"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[36m  Disk Storage (8.0ms) [0m[34mGenerated URL for file at key: 5h42qu3gx1qyjyyqpnnb9vqo0baq (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI1aDQycXUzZ3gxcXlqeXlxcG5uYjl2cW8wYmFxIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiU2NyZWVuc2hvdCBGcm9tIDIwMjUtMDEtMTMgMTctMDYtNDEucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnU2NyZWVuc2hvdCUyMEZyb20lMjAyMDI1LTAxLTEzJTIwMTctMDYtNDEucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wMS0yN1QxNTowMTowOS4wNTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--592b9696970fe6f16e746af4ce2b6ad1756b8443/Screenshot%20From%202025-01-13%2017-06-41.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI1aDQycXUzZ3gxcXlqeXlxcG5uYjl2cW8wYmFxIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiU2NyZWVuc2hvdCBGcm9tIDIwMjUtMDEtMTMgMTctMDYtNDEucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnU2NyZWVuc2hvdCUyMEZyb20lMjAyMDI1LTAxLTEzJTIwMTctMDYtNDEucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wMS0yN1QxNTowMTowOS4wNTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--592b9696970fe6f16e746af4ce2b6ad1756b8443/Screenshot%20From%202025-01-13%2017-06-41.png
+Completed 302 Found in 26ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI1aDQycXUzZ3gxcXlqeXlxcG5uYjl2cW8wYmFxIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiU2NyZWVuc2hvdCBGcm9tIDIwMjUtMDEtMTMgMTctMDYtNDEucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnU2NyZWVuc2hvdCUyMEZyb20lMjAyMDI1LTAxLTEzJTIwMTctMDYtNDEucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wMS0yN1QxNTowMTowOS4wNTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--592b9696970fe6f16e746af4ce2b6ad1756b8443/Screenshot%20From%202025-01-13%2017-06-41.png" for ::1 at 2025-01-27 17:56:09 +0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Screenshot From 2025-01-13 17-06-41"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/posts/65/edit" for ::1 at 2025-01-27 17:56:17 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 65], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/_form.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/posts/_form.html.erb:17
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 65], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/_form.html.erb:24
+  Rendered posts/_form.html.erb (Duration: 22.1ms | GC: 1.3ms)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 24.7ms | GC: 1.3ms)
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | GC: 1.7ms)
+Completed 200 OK in 65ms (Views: 35.4ms | ActiveRecord: 0.5ms (5 queries, 0 cached) | GC: 20.2ms)
+
+
+Started GET "/" for ::1 at 2025-01-27 17:56:22 +0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:7:in `index'
+  [1m[36mPost Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."published_at" DESC, "posts"."updated_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 65], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 65], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 1.0ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.6ms | GC: 0.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:13
+  Rendered /home/anthony/.local/share/mise/installs/ruby/3.3.6/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1.1/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  Rendered posts/index.html.erb within layouts/application (Duration: 53.5ms | GC: 2.3ms)
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 61.8ms | GC: 2.3ms)
+Completed 200 OK in 70ms (Views: 61.6ms | ActiveRecord: 1.7ms (24 queries, 0 cached) | GC: 2.6ms)
+
+
