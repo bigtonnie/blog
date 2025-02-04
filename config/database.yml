@@ -30,3 +30,9 @@ test:
 production:
   <<: *default
   # database: path/to/persistent/storage/production.sqlite3
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
+  pool: 5
