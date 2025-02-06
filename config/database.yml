@@ -87,3 +87,4 @@ production:
   <<: *default
   database: blog_production
   url: <%= ENV["BLOG_DATABASE_URL"] %>
+  pool: 5

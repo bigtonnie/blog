@@ -1,4 +1,4 @@
-<% if user_signed_in?%>
+<% if @posts.any? %>
   <% @posts.each do |post| %>
     <div class='bg-gray-200 p-4 rounded-md mt-5 shadow-md'>
       <% if post.draft? %>
@@ -18,12 +18,9 @@
       <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
     </div>
   <% end %>
-<% else%>
+<% else %>
   <div>
     <h1 class='text-center satisfy-regular' >Thought Canvas</h1>
-    <div class='flex justify-around'>
-      <%= link_to 'Sign up', new_user_registration_path %>
-      <%= link_to 'Log in ', new_user_session_path %>
-    </div>
+    <p class="text-center">Posts coming soon!</p>
   </div>
-<% end%>
+<%  end %>

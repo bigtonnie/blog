@@ -1,7 +1,9 @@
-<div class='flex justify-between'>
-  <%= link_to 'Edit Post', edit_post_path(@post)%>
-  <%= link_to 'Back to Posts', posts_path %>
-</div>
+<% if user_signed_in? %>
+  <div class='flex justify-between'>
+    <%= link_to 'Edit Post', edit_post_path(@post)%>
+    <%= link_to 'Back to Posts', posts_path %>
+  </div>
+<% end %>
 <div class='bg-gray-200 p-4 rounded-md shadow-md mt-4 '>
   <%= image_tag @post.cover_image if @post.cover_image.present? %>
   <h1><%= @post.title %></h1>
