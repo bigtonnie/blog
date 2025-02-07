@@ -20,7 +20,9 @@
   <% end %>
 <% else %>
   <div>
-    <h1 class='text-center satisfy-regular' >Thought Canvas</h1>
+    <% if !user_signed_in? %>
+      <h1 class='text-center satisfy-regular' >Thought Canvas</h1>
+    <% end %>
     <p class="text-center">Posts coming soon!</p>
   </div>
 <%  end %>
